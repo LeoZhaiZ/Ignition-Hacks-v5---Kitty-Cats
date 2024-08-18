@@ -1,0 +1,172 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and 
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+
+
+/* 
+  The style rules specify elements by type and by attributes such as class and ID
+  Each section indicates an element or elements, then lists the style properties to apply
+  See if you can cross-reference the rules in this file with the elements in index.html
+*/
+
+/* Our default values set as CSS variables */
+:root {
+    /* --color-bg: #145DA0; */
+     --color-text-main: #000000;
+     --color-primary: #FFFF00;
+     --wrapper-height: 87vh;
+     --image-max-width: 300px;
+     --image-margin: 3rem;
+     --font-family: "HK Grotesk";
+     --font-family-header: "HK Grotesk";
+   }
+   
+   body{
+     background-image: url("https://cdn.glitch.global/fe4b7557-ee62-4a88-be9c-f10b802d8588/Untitled68_20240817223523.jpeg?v=1723948592978");
+     background-repeat: no-repeat; 
+     height: 100%; 
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+   }
+   
+   /* Basic page style resets */
+   * {
+     box-sizing: border-box;
+   }
+   [hidden] {
+     display: none !important;
+   }
+   
+   /* Import fonts */
+   @font-face {
+     font-family: HK Grotesk;
+     src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+       format("opentype");
+   }
+   @font-face {
+     font-family: HK Grotesk;
+     font-weight: bold;
+     src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+       format("opentype");
+   }
+   
+   
+   body {
+     font-family: HK Grotesk;
+     background-color: var(--color-bg);
+   }
+   
+   /* Page structure */
+   .wrapper {
+     min-height: var(--wrapper-height);
+     display: grid;
+     place-items: center;
+     margin: 0 1rem;
+   }
+   .content {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+   }
+   
+   /* Very light scaling for our illustration */
+   .title {
+     color: #3D550C;
+     font-family: HK Grotesk;
+     font-style: normal;
+     font-weight: bold;
+     font-size: 100px;
+     line-height: 105%;
+     margin: 0;
+   }
+   
+   /* Very light scaling for our illustration */
+   .illustration {
+     width: 300px;
+     height: 100px;
+   }
+   
+   /* Instructions */
+   .instructions {
+     margin: 1rem auto 0;
+   }
+   
+   /* Subheading */
+   h1 {
+     color: #FFFFFF;
+   }
+   
+   /* Interactive image */
+   .illustration:active {
+     transform: translateY(5px);
+   }
+   
+   /* Button dip
+   - Toggling this class on and off will move it down and up again
+   - The button transition property above determines the speed of the translate (500ms)
+   */
+   .dipped {
+     transform: translateY(5px);
+   }
+   
+   /* Links that open files in the editor */
+   .fileopener {
+     cursor:pointer;
+     font-weight:bold;
+     border-bottom:3px solid var(--color-primary);
+     color: var(--color-secondary);
+   }
+   .fileopener:hover {
+     border-bottom:3px solid var(--color-secondary);
+   }
+   
+   button {
+     background-color: #fff;
+     border: 1px solid #d5d9d9;
+     border-radius: 8px;
+     box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+     box-sizing: border-box;
+     color: #0f1111;
+     cursor: pointer;
+     display: inline-block;
+     font-family: "Amazon Ember",sans-serif;
+     font-size: 13px;
+     line-height: 29px;
+     padding: 15px 15px 15px 15px;
+     position: relative;
+     text-align: center;
+     text-decoration: none;
+     user-select: none;
+     -webkit-user-select: none;
+     touch-action: manipulation;
+     vertical-align: middle;
+     width: 100%;
+   }
+   
+   button:hover {
+     background-color: #f7fafa;
+   }
+   
+   button:focus {
+     border-color: #008296;
+     box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+     outline: 0;
+   }
+   
+   .center {
+     margin: auto;
+     width: 50%;
+     padding: 10px;
+     text-align: center;
+   }
+   
+   p {
+     color: #EBEBE8
+   }
