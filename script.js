@@ -40,7 +40,7 @@ const storyline = [
   },
   {
     "prompt": "As you walk deeper into the forest, you find an ancient tree with a hollow trunk. Inside, you discover several items. What do you take with you?",
-    "background": "https://cdn.glitch.global/3fc95b6d-903d-4ba0-b45f-02c013559cb6/green.jpg?v=1723984306165",
+    "background": "https://cdn.glitch.global/3fc95b6d-903d-4ba0-b45f-02c013559cb6/pathswithcat.jpg?v=1723986226299",
     "buttonTexts": [
       "A small, shiny ball that bounces",
       "A hand-carved wooden heart",
@@ -95,6 +95,7 @@ const storyline = [
   },
   {
     "prompt": "As night falls, you stumble upon an old cabin with a warm light glowing inside. You hear soft music coming from within. How do you proceed?",
+    "background": "https://cdn.glitch.global/3fc95b6d-903d-4ba0-b45f-02c013559cb6/cabin.jpg?v=1723986162210",
     "buttonTexts": [
       "Peek inside and suggest playing a game with the residents",
       "Knock on the door and offer to help with anything they need",
@@ -105,6 +106,7 @@ const storyline = [
   },
   {
     "prompt": "The next morning, you find yourself at the edge of a steep cliff with a breathtaking view of the landscape below. You notice different ways to descend. What do you do?",
+    "background": "https://cdn.glitch.global/3fc95b6d-903d-4ba0-b45f-02c013559cb6/cliff.jpg?v=1723986549167",
     "buttonTexts": [
       "Slide down a smooth, rocky slope, making it a fun ride",
       "Hold on to the cliff's edge and carefully make your way down",
