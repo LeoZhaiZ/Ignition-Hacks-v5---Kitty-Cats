@@ -14,6 +14,6 @@ landing.html - Displays a cat based on your personality result
 
 script.js - Script for front-end
 
-server - Receives scraping output and writes to disk
+server.js - Receives scraping output and writes to disk
 
-splice - Splice all individual cat files into a single JSON file
+splice.js - Splice all individual cat files into a single JSON file
