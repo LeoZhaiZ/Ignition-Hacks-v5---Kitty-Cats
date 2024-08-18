@@ -125,7 +125,7 @@ h1 {
 }
 
 button {
-  background-color: #fff;
+  background-color: #FFFFFF;
   border: 1px solid #d5d9d9;
   border-radius: 8px;
   box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
@@ -134,7 +134,7 @@ button {
   cursor: pointer;
   display: inline-block;
   font-family: "Amazon Ember",sans-serif;
-  font-size: 13px;
+  font-size: 18px;
   line-height: 29px;
   padding: 15px 15px 15px 15px;
   position: relative;
