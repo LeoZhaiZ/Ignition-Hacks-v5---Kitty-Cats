@@ -29,6 +29,7 @@ const storyline = [
   },
   {
     "prompt": "On the other side of the river, you stumble upon a mysterious cave with glowing symbols. How do you proceed?",
+    "background": "https://cdn.glitch.global/3fc95b6d-903d-4ba0-b45f-02c013559cb6/cave.png?v=1723983723688",
     "buttonTexts": [
       "Play a game of mimicry with the echoes",
       "Trace the symbols with your fingers to understand them",
