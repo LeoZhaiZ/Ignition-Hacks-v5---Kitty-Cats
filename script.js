@@ -40,7 +40,7 @@ const storyline = [
   },
   {
     "prompt": "As you walk deeper into the forest, you find an ancient tree with a hollow trunk. Inside, you discover several items. What do you take with you?",
-    "background": "https://cdn.glitch.global/3fc95b6d-903d-4ba0-b45f-02c013559cb6/paths.jpg?v=1723978722613",
+    "background": "https://cdn.glitch.global/3fc95b6d-903d-4ba0-b45f-02c013559cb6/green.jpg?v=1723984306165",
     "buttonTexts": [
       "A small, shiny ball that bounces",
       "A hand-carved wooden heart",
@@ -62,6 +62,7 @@ const storyline = [
   },
   {
     "prompt": "As night falls, you see a shooting star and make a wish. What do you wish for?",
+    "background": "https://cdn.glitch.global/3fc95b6d-903d-4ba0-b45f-02c013559cb6/stars.jpg?v=1723983984618",
     "buttonTexts": [
       "Endless nights filled with fun and laughter",
       "A lifelong companion to share your adventures with",
@@ -72,6 +73,7 @@ const storyline = [
   },
   {
     "prompt": "As you continue your journey, you come across a vast meadow filled with wildflowers. You notice different paths leading in various directions. Which path do you take?",
+    "background": "https://cdn.glitch.global/3fc95b6d-903d-4ba0-b45f-02c013559cb6/flowers.jpg?v=1723984301418",
     "buttonTexts": [
       "Follow a butterfly dancing through the flowers",
       "Take the path lined with blooming roses",
@@ -82,6 +84,7 @@ const storyline = [
   },
   {
     "prompt": "After walking for some time, you encounter a majestic stag standing beside a crystal-clear pond. The stag seems to be guarding something. What do you do?",
+    "background": "https://cdn.glitch.global/3fc95b6d-903d-4ba0-b45f-02c013559cb6/stag.png?v=1723984857747",
     "buttonTexts": [
       "Try to play a game of tag with the stag",
       "Approach the stag slowly and gently offer it some food",
