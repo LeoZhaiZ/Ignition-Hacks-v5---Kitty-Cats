@@ -5,3 +5,9 @@ data.json - Where we stored all of the description and personality ratings of ea
 index.html - Front-end of the website
 
 scape.js - Scraper for petfinder.com
+
+style.css - stylesheet for frontend
+
+questions.html - main game page
+
+landing.html - displays a cat based on your personality result
