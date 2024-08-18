@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <style>
+            h1, h2 {
+                font-family: monospace;
+            }
+            p {
+                font-family: Arial, Helvetica, sans-serif
+            }
+            body {
+                background-color: #ffb997;
+            }
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            button {
+                position: absolute;
+                top: 50%;
+            }
+            .center {
+                text-align: center;
+            }
+            #buttondiv {
+                text-align: center;
+                padding-bottom: 10px;
+            }
+            #descdiv {
+                word-wrap: break-word;
+                width: 500px;
+                margin: auto;
+                width: 90%;
+                border: 3px solid #874266;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <h1 class="center">Your purr-fect companion is...</h1>
+    <h1 class="center" id="catname"></h1>
+    <img id="catimg" height="400" width="400">
+    <a id="catlink"><h4 class="center">[I'm up for adoption! Click me!]</h4></a>
+    <h1 class="center" id="catstats"></h1>
+    <div id="buttondiv">
+        <button id="share" style="position: relative;">Share this quiz!</button>
+    </div>
+    <div id="descdiv">
+        <h2>Description from petfinder:</h2>
+        <p id="catdesc"></p>
+    </div>
+</html>
+<script>
+const catname = document.getElementById("catname")
+const catimg = document.getElementById("catimg")
+const catstats = document.getElementById("catstats")
+const catdesc = document.getElementById("catdesc")
+const catlink = document.getElementById("catlink")
+const share = document.getElementById("share")
+
+const traits = {}
+const closest = []
+const params = new URLSearchParams(window.location.search)
+traits["playful"] = parseInt(params.get("playful")) || 0
+traits["affectionate"] = parseInt(params.get("affectionate")) || 0
+traits["sociable"] = parseInt(params.get("sociable")) || 0
+traits["independent"] = parseInt(params.get("independent")) || 0
+traits["adventurous"] = parseInt(params.get("adventurous")) || 0
+
+share.addEventListener("click", () => {
+    navigator.share()
+})
+
+const src = fetch("data.json").then((res) => {
+    res.json().then((data) => {
+        for (const [id, cat] of Object.entries(data)) {
+            if (!cat["traits"]) continue
+            let differencefactor = 0
+            for (const [trait, value] of Object.entries(traits)) {
+                differencefactor += Math.abs(value - cat["traits"][trait])
+            }
+            if (isNaN(differencefactor)) continue
+            cat["differencefactor"] = differencefactor
+            closest.push(cat)
+        }
+        closest.sort((a, b) => a["differencefactor"] - b["differencefactor"])
+        const closest10 = closest.slice(0, 10)
+        const selection = closest10[Math.floor(Math.random() * 10)]
+        catname.innerHTML = selection["name"]
+        catimg.src = selection["img"]
+        let cattraits = ""
+        for (const [trait, value] of Object.entries(selection["traits"])) {
+            cattraits += `${trait}: ${value}\n`
+        }
+        catstats.innerHTML = cattraits
+        catdesc.innerHTML = selection["desc"]
+        catlink.href = selection["url"]
+    })
+})
+</script>
