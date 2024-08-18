@@ -6,8 +6,14 @@ index.html - Front-end of the website
 
 scape.js - Scraper for petfinder.com
 
-style.css - stylesheet for frontend
+style.css - Stylesheet for frontend
 
-questions.html - main game page
+questions.html - Main game page
 
-landing.html - displays a cat based on your personality result
+landing.html - Displays a cat based on your personality result
+
+script.js - Script for front-end
+
+server - Receives scraping output and writes to disk
+
+splice - Splice all individual cat files into a single JSON file
